@@ -1,0 +1,7 @@
+import:
+    entities:
+    - entity: organizations
+      #inputCsv: c:/tmp/test.csv
+      inputCsv: c:/tmp/orgs_data_2016_2017.csv
+    - entity: players
+      inputCsv: -None-
