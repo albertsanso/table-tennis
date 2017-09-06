@@ -15,6 +15,7 @@ public class JpaOrganization {
 
     private Set<JpaOrganizationVenue> organizationVenues = new HashSet<JpaOrganizationVenue>();
     private Set<JpaOrganizationAlias> organizationAliases = new HashSet<JpaOrganizationAlias>();
+    private Set<JpaTeam> teams = new HashSet<JpaTeam>();
 
     public JpaOrganization() {}
 
@@ -86,5 +87,14 @@ public class JpaOrganization {
 
     public void addOrganizationAlias(JpaOrganizationAlias jpaOrganizationAlias) {
         this.organizationAliases.add(jpaOrganizationAlias);
+    }
+
+    @OneToMany(mappedBy = "organization", cascade={CascadeType.ALL})
+    public Set<JpaTeam> getTeams() {
+        return teams;
+    }
+
+    public void setTeams(Set<JpaTeam> teams) {
+        this.teams = teams;
     }
 }

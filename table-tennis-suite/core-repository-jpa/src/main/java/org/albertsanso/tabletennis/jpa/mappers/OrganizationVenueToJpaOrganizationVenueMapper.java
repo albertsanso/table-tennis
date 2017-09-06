@@ -26,7 +26,11 @@ public class OrganizationVenueToJpaOrganizationVenueMapper implements Function<O
         JpaVenue jpaVenue = venueToJpaVenueMapper.apply(organizationVenue.getVenue());
         JpaOrganization jpaOrganization = organizationToJpaOrganizationMapper.apply(organizationVenue.getOrganization());
 
-        JpaOrganizationVenue jpaOrganizationVenue = new JpaOrganizationVenue(jpaOrganization, jpaVenue, organizationVenue.getSeason());
+        JpaOrganizationVenue jpaOrganizationVenue = new JpaOrganizationVenue(
+                jpaOrganization,
+                jpaVenue,
+                organizationVenue.getSeason().seasonKey
+        );
         return jpaOrganizationVenue;
     }
 }

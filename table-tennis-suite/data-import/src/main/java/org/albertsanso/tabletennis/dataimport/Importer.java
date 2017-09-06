@@ -212,7 +212,7 @@ public class Importer {
         if (existingOV == null) {
 
             OrganizationVenue.OrganizationVenueBuilder builder = new OrganizationVenue.OrganizationVenueBuilder(
-                organization, venue, season.seasonKey
+                organization, venue, season
             );
 
             /*

@@ -1,0 +1,142 @@
+- season: "2016-2017"
+  categories:
+  - category: "Super Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/liga_eligamenuempate.php?idm=2&idsm=0&IDNIVEL=11&IDGRUPO=%DANICO"
+  - category: "Super Divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=12&IDGRUPO=%DANICO"
+  - category: "Divisio honor masculina"
+    urls:
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=01"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=02"
+  - category: "Divisio honor femenina"
+    urls:
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=01"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=02"
+  - category: "Primera Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=01"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=02"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=03"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=04"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=05"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=06"
+  - category: "Primera divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=01"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=02"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=03"
+    - "http://resultados.rfetm.es/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=04"
+- season: "2015-2016"
+  categories:
+  - category: "Super Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenuempate.php?idm=2&idsm=0&IDNIVEL=11&IDGRUPO=%DANICO"
+  - category: "Super Divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=12&IDGRUPO=%DANICO"
+  - category: "Divisio honor masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=02"
+  - category: "Divisio honor femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=02"
+  - category: "Primera Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=02"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=03"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=04"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=05"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=06"
+  - category: "Primera divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2015-2016/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=02"
+- season: "2014-2015"
+  categories:
+  - category: "Super Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenuempate.php?idm=2&idsm=0&IDNIVEL=11&IDGRUPO=%DANICO"
+  - category: "Super Divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=12&IDGRUPO=%DANICO"
+  - category: "Divisio honor masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=02"
+  - category: "Divisio honor femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=02"
+  - category: "Primera Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=02"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=03"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=04"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=05"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=06"
+  - category: "Primera divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2014-2015/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=02"
+- season: "2013-2014"
+  categories:
+  - category: "Super Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenuempate.php?idm=2&idsm=0&IDNIVEL=11&IDGRUPO=%DANICO"
+  - category: "Super Divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=12&IDGRUPO=%DANICO"
+  - category: "Divisio honor masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=02"
+  - category: "Divisio honor femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=02"
+  - category: "Primera Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=02"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=03"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=04"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=05"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=06"
+  - category: "Primera divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2013-2014/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=02"
+- season: "2012-2013"
+  categories:
+  - category: "Super Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenuempate.php?idm=2&idsm=0&IDNIVEL=11&IDGRUPO=%DANICO"
+  - category: "Super Divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=12&IDGRUPO=%DANICO"
+  - category: "Divisio honor masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=13&IDGRUPO=02"
+  - category: "Divisio honor femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=14&IDGRUPO=02"
+  - category: "Primera Divisio masculina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=02"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=03"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=04"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=05"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=15&IDGRUPO=06"
+  - category: "Primera divisio femenina"
+    urls:
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=01"
+    - "http://resultados.rfetm.es/historico/2012-2013/liga_eligamenu.php?idm=2&idsm=0&IDNIVEL=16&IDGRUPO=02"

@@ -9,11 +9,14 @@ import org.albertsanso.tabletennis.port.StateRepository;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.ArrayList;
+import java.util.List;
 
 @Named
 public class StateJpaRepository implements StateRepository {
 
     private StateJpaRepositoryHelper stateJpaRepositoryHelper;
+
     private JpaStateToStateMapper jpaStateToStateMapper;
     private StateToJpaStateMapper stateToJpaStateMapper;
 
@@ -43,5 +46,17 @@ public class StateJpaRepository implements StateRepository {
         JpaState jpaState = stateJpaRepositoryHelper.findByCodeName(codeName);
         State state = jpaStateToStateMapper.apply(jpaState);
         return state;
+    }
+
+    @Override
+    public List<State> findAll() { return mapList(stateJpaRepositoryHelper.findAll()); }
+
+    private List<State> mapList(List<JpaState> list) {
+        List<State> states = new ArrayList<>();
+        for (JpaState jpaState : list) {
+            State state = jpaStateToStateMapper.apply(jpaState);
+            states.add(state);
+        }
+        return states;
     }
 }

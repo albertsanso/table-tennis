@@ -1,15 +1,17 @@
 package org.albertsanso.tabletennis.model;
 
+import org.albertsanso.tabletennis.data.Season;
+
 public class OrganizationVenue extends ValueObject {
 
     private Long id;
     private Organization organization;
     private Venue venue;
-    private String season;
+    private Season season;
 
     private OrganizationVenue() { super(); }
 
-    private OrganizationVenue(Long id, Organization organization, Venue venue, String season) {
+    private OrganizationVenue(Long id, Organization organization, Venue venue, Season season) {
         this.id = id;
         this.organization = organization;
         this.venue = venue;
@@ -38,7 +40,7 @@ public class OrganizationVenue extends ValueObject {
         return venue;
     }
 
-    public String getSeason() {
+    public Season getSeason() {
         return season;
     }
 
@@ -47,9 +49,9 @@ public class OrganizationVenue extends ValueObject {
         private Long id;
         private Organization organization;
         private Venue venue;
-        private String season;
+        private Season season;
 
-        public OrganizationVenueBuilder(Organization organization, Venue venue, String season) {
+        public OrganizationVenueBuilder(Organization organization, Venue venue, Season season) {
             this.organization = organization;
             this.venue = venue;
             this.season = season;
@@ -67,7 +69,7 @@ public class OrganizationVenue extends ValueObject {
             return venue;
         }
 
-        public String getSeason() {
+        public Season getSeason() {
             return season;
         }
 

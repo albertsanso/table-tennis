@@ -11,7 +11,7 @@ public class JpaCategory {
     private String name;
     private String season;
 
-    private JpaCompetition jpaCompetition;
+    private JpaCompetition competition;
 
     public JpaCategory() {}
 
@@ -45,11 +45,11 @@ public class JpaCategory {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "competition_id")
-    public JpaCompetition getJpaCompetition() {
-        return jpaCompetition;
+    public JpaCompetition getCompetition() {
+        return competition;
     }
 
-    public void setJpaCompetition(JpaCompetition jpaCompetition) {
-        this.jpaCompetition = jpaCompetition;
+    public void setCompetition(JpaCompetition competition) {
+        this.competition = competition;
     }
 }

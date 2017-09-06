@@ -1,5 +1,6 @@
 package org.albertsanso.tabletennis.jpa.mappers;
 
+import org.albertsanso.tabletennis.data.Season;
 import org.albertsanso.tabletennis.jpa.model.JpaOrganizationVenue;
 import org.albertsanso.tabletennis.model.Organization;
 import org.albertsanso.tabletennis.model.OrganizationVenue;
@@ -28,10 +29,12 @@ public class JpaOrganizationVenueToOrganizationVenueMapper implements Function<J
         Organization organization = jpaOrganizationToOrganizationMapper.apply(jpaOrganizationVenue.getOrganization());
         Venue venue = jpaVenueToVenueMapper.apply(jpaOrganizationVenue.getVenue());
 
+        Season season = Season.getByKey(jpaOrganizationVenue.getSeason());
+
         OrganizationVenue.OrganizationVenueBuilder builder = new OrganizationVenue.OrganizationVenueBuilder(
                 organization,
                 venue,
-                jpaOrganizationVenue.getSeason()
+                season
         );
 
         OrganizationVenue ov = builder

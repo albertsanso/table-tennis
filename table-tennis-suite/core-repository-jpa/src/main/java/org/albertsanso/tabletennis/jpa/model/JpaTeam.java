@@ -4,20 +4,20 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="teams")
-public class JpaMatch {
+public class JpaTeam {
 
     private Long id;
     private String codeName;
     private String name;
     private String season;
 
-    private JpaOrganization jpaOrganization;
-    private JpaCompetition jpaCompetition;
-    private JpaCategory jpaCategory;
+    private JpaOrganization organization;
+    private JpaCompetition competition;
+    private JpaCategory category;
 
-    public JpaMatch() {}
+    public JpaTeam() {}
 
-    public JpaMatch(String codeName, String name, String season) {
+    public JpaTeam(String codeName, String name, String season) {
         this.codeName = codeName;
         this.name = name;
         this.season = season;
@@ -63,31 +63,31 @@ public class JpaMatch {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id")
-    public JpaOrganization getJpaOrganization() {
-        return jpaOrganization;
+    public JpaOrganization getOrganization() {
+        return organization;
     }
 
-    public void setJpaOrganization(JpaOrganization jpaOrganization) {
-        this.jpaOrganization = jpaOrganization;
+    public void setOrganization(JpaOrganization organization) {
+        this.organization = organization;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "competition_id")
-    public JpaCompetition getJpaCompetition() {
-        return jpaCompetition;
+    public JpaCompetition getCompetition() {
+        return competition;
     }
 
-    public void setJpaCompetition(JpaCompetition jpaCompetition) {
-        this.jpaCompetition = jpaCompetition;
+    public void setCompetition(JpaCompetition competition) {
+        this.competition = competition;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
-    public JpaCategory getJpaCategory() {
-        return jpaCategory;
+    public JpaCategory getCategory() {
+        return category;
     }
 
-    public void setJpaCategory(JpaCategory jpaCategory) {
-        this.jpaCategory = jpaCategory;
+    public void setCategory(JpaCategory category) {
+        this.category = category;
     }
 }

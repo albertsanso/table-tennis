@@ -6,7 +6,7 @@ retrieval:
       #outputCsv: c:/tmp/orgs_data_2014_2015.csv
       #outputCsv: c:/tmp/orgs_data_2015_2016.csv
       outputCsv: c:/tmp/orgs_data_2016_2017.csv
-      urls: league_qualifications_urls.yaml
+      urls: rfetm_league_qualifications_urls.yaml
       #seasons: 2012-2013
       #seasons: 2013-2014
       #seasons: 2014-2015

@@ -35,16 +35,6 @@ public class OrganizationToJpaOrganizationMapper implements Function<Organizatio
         Set<JpaOrganizationVenue> jpaOvsSet = new HashSet<JpaOrganizationVenue>();
         Set<JpaOrganizationAlias> jpaOasSet = new HashSet<JpaOrganizationAlias>();
 
-        /*
-        for (OrganizationVenue ov : organization.getOrganizationVenues()) {
-            jpaOvsSet.add(organizationVenueToJpaOrganizationVenueMapper.apply(ov));
-        }
-
-        for (OrganizationAlias oa : organization.getOrganizationAliases()) {
-            jpaOasSet.add(organizationAliasToJpaOrganizationAliasMapper.apply(oa));
-        }
-        */
-
         JpaOrganization jpaOrganization = new JpaOrganization(organization.getCodeName(), organization.getName(), organization.getType());
         jpaOrganization.setId(organization.getId());
         jpaOrganization.setOrganizationAliases(jpaOasSet);

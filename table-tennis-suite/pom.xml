@@ -20,6 +20,7 @@
         <module>data-import</module>
         <module>data-import-runtime</module>
         <module>data-commons</module>
+        <module>core-spring-rest</module>
     </modules>
 
     <name>table-tennis-suite</name>

@@ -31,7 +31,7 @@ public class JpaOrganizationVenue {
         this.id = id;
     }
 
-    @ManyToOne//(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "organization_id")
     public JpaOrganization getOrganization() {
         return organization;
@@ -41,7 +41,7 @@ public class JpaOrganizationVenue {
         this.organization = organization;
     }
 
-    @ManyToOne//((cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "venue_id")
     public JpaVenue getVenue() {
         return venue;

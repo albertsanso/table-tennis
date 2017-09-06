@@ -1,4 +1,4 @@
-use tt;
+use ttsuite;
 
 CREATE TABLE `states` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,

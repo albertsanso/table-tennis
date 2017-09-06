@@ -14,12 +14,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <dependency>
-            <groupId>org.albertsanso.tabletennis</groupId>
-            <artifactId>data-import</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
         <!-- deps -->
         <dependency>
             <groupId>javax.inject</groupId>
@@ -36,14 +30,25 @@
             <artifactId>core-repository-jpa</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <!--
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>1.5.6.RELEASE</version>
+            <artifactId>table-tennis-suite</artifactId>
+            <groupId>org.albertsanso.tabletennis</groupId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         -->
+        <dependency>
+            <groupId>org.albertsanso.tabletennis</groupId>
+            <artifactId>data-import</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.albertsanso.tabletennis</groupId>
+            <artifactId>core-spring-rest</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
 

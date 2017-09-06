@@ -1,6 +1,8 @@
 package org.albertsanso.tabletennis.jpa.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="competitions")
@@ -10,6 +12,9 @@ public class JpaCompetition {
     private String codeName;
     private String name;
     private String season;
+
+    private Set<JpaCategory> categories = new HashSet<JpaCategory>();
+    private Set<JpaTeam> teams = new HashSet<JpaTeam>();
 
     public JpaCompetition() {}
 
@@ -40,4 +45,22 @@ public class JpaCompetition {
     public String getSeason() { return season; }
 
     public void setSeason(String season) { this.season = season; }
+
+    @OneToMany(mappedBy = "competition", cascade={CascadeType.ALL})
+    public Set<JpaCategory> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<JpaCategory> categories) {
+        this.categories = categories;
+    }
+
+    @OneToMany(mappedBy = "competition", cascade={CascadeType.ALL})
+    public Set<JpaTeam> getTeams() {
+        return teams;
+    }
+
+    public void setTeams(Set<JpaTeam> teams) {
+        this.teams = teams;
+    }
 }
