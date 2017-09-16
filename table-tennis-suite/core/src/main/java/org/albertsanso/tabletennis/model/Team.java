@@ -7,6 +7,7 @@ public class Team extends ValueObject {
     private Long id;
     private String codeName;
     private String name;
+    private String externalId;
     private Season season;
     private Organization organization;
     private Category category;
@@ -14,10 +15,11 @@ public class Team extends ValueObject {
 
     private Team() {}
 
-    private Team(Long id, String codeName, String name, Season season, Organization organization, Category category, Competition competition) {
+    private Team(Long id, String codeName, String name, String externalId, Season season, Organization organization, Category category, Competition competition) {
         this.id = id;
         this.codeName = codeName;
         this.name = name;
+        this.externalId = externalId;
         this.season = season;
         this.organization = organization;
         this.category = category;
@@ -29,6 +31,7 @@ public class Team extends ValueObject {
                 builder.getId(),
                 builder.getCodeName(),
                 builder.getName(),
+                builder.getExternalId(),
                 builder.getSeason(),
                 builder.getOrganization(),
                 builder.getCategory(),
@@ -48,6 +51,8 @@ public class Team extends ValueObject {
     public String getName() {
         return name;
     }
+
+    public String getExternalId() { return externalId; }
 
     public Season getSeason() {
         return season;
@@ -69,6 +74,7 @@ public class Team extends ValueObject {
         private Long id;
         private String codeName;
         private String name;
+        private String externalId;
         private Season season;
         private Organization organization;
         private Category category;
@@ -92,6 +98,8 @@ public class Team extends ValueObject {
             return name;
         }
 
+        public String getExternalId() { return externalId; }
+
         public Season getSeason() {
             return season;
         }
@@ -110,6 +118,11 @@ public class Team extends ValueObject {
 
         public TeamBuilder withId(Long id) {
             this.id = id;
+            return this;
+        }
+
+        public TeamBuilder withExternalId(String externalId) {
+            this.externalId = externalId;
             return this;
         }
 

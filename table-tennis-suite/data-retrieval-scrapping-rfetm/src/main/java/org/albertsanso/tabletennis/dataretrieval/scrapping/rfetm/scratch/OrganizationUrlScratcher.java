@@ -1,4 +1,4 @@
-package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm;
+package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.scratch;
 
 import org.albertsanso.tabletennis.data.Season;
 import org.albertsanso.tabletennis.dataretrieval.scrapping.SeasonUrlScratcherImpl;
@@ -19,7 +19,7 @@ public class OrganizationUrlScratcher extends SeasonUrlScratcherImpl implements 
     private static final String URL_SELECTOR = "td:nth-child(2) > b > a";
 
     @Override
-    protected String getRootSelectorBySeason(Season season) {
+    protected String getRootSelector() {
         String rootSelector = ROOT_SELECTOR;
         if (Season.SEASON_2012_2013.seasonKey.equals(season.seasonKey)) {
             rootSelector = ROOT_SELECTOR_2012_2013;
@@ -28,13 +28,13 @@ public class OrganizationUrlScratcher extends SeasonUrlScratcherImpl implements 
     }
 
     @Override
-    protected List<String> scratchFromRoot(Elements root, Season season)
+    protected List<String> scratchFromRoot(Elements root)
     {
         Elements rowsElements = root.select("tr");
-        return mapRowElements(rowsElements, season);
+        return mapRowElements(rowsElements);
     }
 
-    private List<String> mapRowElements(Elements rows, Season season) {
+    private List<String> mapRowElements(Elements rows) {
         List<String> urls = new ArrayList();
 
         for (int i=1; i<rows.size(); i++) {

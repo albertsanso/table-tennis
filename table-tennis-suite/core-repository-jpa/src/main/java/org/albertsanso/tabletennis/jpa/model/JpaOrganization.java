@@ -12,6 +12,7 @@ public class JpaOrganization {
     private String codeName;
     private String name;
     private String type;
+    private String externalId;
 
     private Set<JpaOrganizationVenue> organizationVenues = new HashSet<JpaOrganizationVenue>();
     private Set<JpaOrganizationAlias> organizationAliases = new HashSet<JpaOrganizationAlias>();
@@ -61,6 +62,15 @@ public class JpaOrganization {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Column(name="external_id")
+    public String getExternalId() {
+        return externalId;
+    }
+
+    public void setExternalId(String externalId) {
+        this.externalId = externalId;
     }
 
     @OneToMany(mappedBy = "organization", cascade={CascadeType.ALL})

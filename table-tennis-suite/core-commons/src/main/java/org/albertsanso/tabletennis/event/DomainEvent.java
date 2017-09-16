@@ -1,4 +1,4 @@
 package org.albertsanso.tabletennis.event;
 
-public interface DomainEvent {
+public class DomainEvent {
 }

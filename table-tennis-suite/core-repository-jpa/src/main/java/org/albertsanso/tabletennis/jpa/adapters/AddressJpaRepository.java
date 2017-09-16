@@ -30,7 +30,9 @@ public class AddressJpaRepository implements AddressRepository {
         return jpaAddressToAddressMapper.apply(jpaAddress);
     }
 
-    public void remove(Address address) {}
+    public void remove(Address address) {
+        addressJpaRepositoryHelper.delete(address.getId());
+    }
 
     public Address findById(Long id) {
         JpaAddress jpaAddress = addressJpaRepositoryHelper.findOne(id);

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CategoryJpaRepositoryHelper extends CrudRepository<JpaCategory, Long> {
+    JpaCategory findByExternalId(String id);
 }

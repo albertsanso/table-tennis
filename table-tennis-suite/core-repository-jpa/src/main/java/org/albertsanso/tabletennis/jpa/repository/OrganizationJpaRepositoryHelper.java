@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OrganizationJpaRepositoryHelper extends CrudRepository<JpaOrganization, Long> {
     JpaOrganization findByCodeName(String codeName);
+    JpaOrganization findByExternalId(String id);
 }

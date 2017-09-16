@@ -1,7 +1,11 @@
-package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm;
+package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.retrieve;
 
 import org.albertsanso.tabletennis.data.OrganizationKeys;
 import org.albertsanso.tabletennis.data.Season;
+import org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.URLQualificationsDepot;
+import org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.scratch.OrganizationInfoScratcher;
+import org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.scratch.OrganizationUrlScratcher;
+import org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.scratch.QualificationsInfoScratcher;
 import org.albertsanso.util.SimpleCsvMapWriter;
 
 import javax.inject.Inject;
@@ -14,7 +18,7 @@ import java.util.Map;
 @Named
 public class OrganizationRetriever {
 
-    private URLQualificationsDepot organizationsUrls;
+    private URLQualificationsDepot qualificationsUrls;
     private SimpleCsvMapWriter organizationWriter;
 
     private OrganizationInfoScratcher organizationInfoScratcher;
@@ -26,18 +30,18 @@ public class OrganizationRetriever {
 
     @Inject
     public OrganizationRetriever(
-            URLQualificationsDepot organizationsUrls,
-            SimpleCsvMapWriter writer,
+            URLQualificationsDepot qualificationsUrls,
+            SimpleCsvMapWriter organizationWriter,
             OrganizationInfoScratcher organizationInfoScratcher,
             OrganizationUrlScratcher organizationUrlScratcher,
             QualificationsInfoScratcher qualificationsInfoScratcher,
-            List<Season> seasonsList) throws IOException {
-        this.organizationsUrls = organizationsUrls;
-        this.organizationWriter = writer;
+            List<Season> organizationSeasonsList) throws IOException {
+        this.qualificationsUrls = qualificationsUrls;
+        this.organizationWriter = organizationWriter;
         this.organizationInfoScratcher = organizationInfoScratcher;
         this.organizationUrlScratcher = organizationUrlScratcher;
         this.qualificationsInfoScratcher = qualificationsInfoScratcher;
-        this.organizationSeasonsList = seasonsList;
+        this.organizationSeasonsList = organizationSeasonsList;
     }
 
     private void resetWrittenHeaderCheck() {
@@ -60,16 +64,22 @@ public class OrganizationRetriever {
     }
 
     public void retrieveOrganizationsBySeason(Season season) throws IOException {
-        List<String> seasonQualificationsUrls = organizationsUrls.getQualificationsUrlsBySeason(season);
+        List<String> seasonQualificationsUrls = qualificationsUrls.getQualificationsUrlsBySeason(season);
         for (String seasonedURL : seasonQualificationsUrls) {
 
             System.out.println("processing: "+seasonedURL);
-            Map<String, String> qualificationsInfoMappings = qualificationsInfoScratcher.scratch(seasonedURL, season);
+
+            List<Map<String, String>> qualificationsInfoMappingsList = qualificationsInfoScratcher.scratch(seasonedURL, season);
+            Map<String, String> qualificationsInfoMappings = qualificationsInfoMappingsList.get(0);
+
             List<String> organizationsUrls = organizationUrlScratcher.scratch(seasonedURL, season);
 
             List<Map<String, String>> mappings = new ArrayList<Map<String, String>>();
             for (String organizationUrl : organizationsUrls) {
-                Map<String, String> mapping = organizationInfoScratcher.scratch(organizationUrl, season);
+
+                List<Map<String, String>> mappingList = organizationInfoScratcher.scratch(organizationUrl, season);
+
+                Map<String, String> mapping = mappingList.get(0);
                 mapping.putAll(qualificationsInfoMappings);
                 mappings.add(mapping);
             }

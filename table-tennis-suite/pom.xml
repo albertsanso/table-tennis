@@ -21,6 +21,8 @@
         <module>data-import-runtime</module>
         <module>data-commons</module>
         <module>core-spring-rest</module>
+        <module>data-retrieval-scrapping-rtbtt</module>
+        <module>data-retrieval-scrapping-fctt</module>
     </modules>
 
     <name>table-tennis-suite</name>

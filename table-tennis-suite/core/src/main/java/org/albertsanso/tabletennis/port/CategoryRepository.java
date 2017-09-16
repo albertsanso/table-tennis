@@ -6,4 +6,5 @@ public interface CategoryRepository {
     Category save(Category category);
     void remove(Category category);
     Category findById(Long id);
+    Category findByExternalId(String externalId);
 }

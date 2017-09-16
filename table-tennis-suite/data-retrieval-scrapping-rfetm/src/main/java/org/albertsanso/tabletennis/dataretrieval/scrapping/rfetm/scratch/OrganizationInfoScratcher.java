@@ -1,13 +1,13 @@
-package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm;
+package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.scratch;
 
 import org.albertsanso.tabletennis.data.Season;
 import org.albertsanso.tabletennis.dataretrieval.scrapping.SeasonInfoScratcherImpl;
 import org.albertsanso.tabletennis.dataretrieval.scrapping.iface.SeasonInfoScratcher;
+import org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.mapper.OrganizationMapper;
 import org.jsoup.select.Elements;
 
 import javax.inject.Named;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Named
 public class OrganizationInfoScratcher extends SeasonInfoScratcherImpl implements SeasonInfoScratcher {
@@ -17,7 +17,7 @@ public class OrganizationInfoScratcher extends SeasonInfoScratcherImpl implement
     private static final String INFO_SELECTOR = "td:nth-child(2) > div > font";
 
     @Override
-    protected String getRootSelectorBySeason(Season season) {
+    protected String getRootSelector() {
         String rootSelector = ROOT_SELECTOR;
         if (Season.SEASON_2012_2013.seasonKey.equals(season.seasonKey)) {
             rootSelector = ROOT_SELECTOR_2012_2013;
@@ -26,10 +26,13 @@ public class OrganizationInfoScratcher extends SeasonInfoScratcherImpl implement
     }
 
     @Override
-    protected Map<String, String> scratchFromRoot(Elements root)
+    protected List<Map<String, String>> scratchFromRoot(Elements root)
     {
         Elements rowsElements = root.select("tr");
-        return mapRowElements(rowsElements);
+        Map<String, String> rowInfo = mapRowElements(rowsElements);
+        List<Map<String, String>> rowsInfosList = new ArrayList<Map<String, String>>();
+        rowsInfosList.add(rowInfo);
+        return rowsInfosList;
     }
 
     protected Map<String, String> mapRowElements(Elements rows) {

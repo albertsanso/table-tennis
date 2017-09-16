@@ -35,6 +35,7 @@ public class JpaCategoryToCategoryMapper implements Function<JpaCategory, Catego
 
         Category category = builder
                 .withCompetition(competition)
+                .withExternalId(jpaCategory.getExternalId())
                 .create();
 
         return category;

@@ -1,4 +1,4 @@
-package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm;
+package org.albertsanso.tabletennis.dataretrieval.scrapping.rfetm.mapper;
 
 import org.albertsanso.tabletennis.data.OrganizationKeys;
 

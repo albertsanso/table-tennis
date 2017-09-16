@@ -6,4 +6,5 @@ public interface TeamRepository {
     Team save(Team team);
     void remove(Team team);
     Team findById(Long id);
+    Team findByExternalId(String externalId);
 }

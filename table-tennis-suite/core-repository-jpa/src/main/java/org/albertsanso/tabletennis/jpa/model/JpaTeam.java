@@ -1,6 +1,8 @@
 package org.albertsanso.tabletennis.jpa.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="teams")
@@ -10,10 +12,13 @@ public class JpaTeam {
     private String codeName;
     private String name;
     private String season;
+    private String externalId;
 
     private JpaOrganization organization;
     private JpaCompetition competition;
     private JpaCategory category;
+
+    private Set<JpaTeamPlayer> teamPlayers = new HashSet<JpaTeamPlayer>();
 
     public JpaTeam() {}
 
@@ -61,6 +66,15 @@ public class JpaTeam {
         this.season = season;
     }
 
+    @Column(name="external_id")
+    public String getExternalId() {
+        return externalId;
+    }
+
+    public void setExternalId(String externalId) {
+        this.externalId = externalId;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id")
     public JpaOrganization getOrganization() {
@@ -89,5 +103,14 @@ public class JpaTeam {
 
     public void setCategory(JpaCategory category) {
         this.category = category;
+    }
+
+    @OneToMany(mappedBy = "player", cascade={CascadeType.ALL})
+    public Set<JpaTeamPlayer> getTeamPlayers() {
+        return teamPlayers;
+    }
+
+    public void setTeamPlayers(Set<JpaTeamPlayer> teamPlayers) {
+        this.teamPlayers = teamPlayers;
     }
 }

@@ -41,6 +41,7 @@ public class JpaOrganizationToOrganizationMapper implements Function<JpaOrganiza
         Organization organization = builder
                 .withId(jpaOrganization.getId())
                 .withAliases(organizationAliases)
+                .withExternalId(jpaOrganization.getExternalId())
                 .create();
         return organization;
     }

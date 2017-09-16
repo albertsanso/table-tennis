@@ -39,6 +39,7 @@ public class OrganizationToJpaOrganizationMapper implements Function<Organizatio
         jpaOrganization.setId(organization.getId());
         jpaOrganization.setOrganizationAliases(jpaOasSet);
         jpaOrganization.setOrganizationVenues(jpaOvsSet);
+        jpaOrganization.setExternalId(organization.getExternalId());
 
         return jpaOrganization;
     }

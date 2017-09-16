@@ -10,6 +10,7 @@ public class JpaCategory {
     private String codeName;
     private String name;
     private String season;
+    private String externalId;
 
     private JpaCompetition competition;
 
@@ -42,6 +43,15 @@ public class JpaCategory {
     public String getSeason() { return season; }
 
     public void setSeason(String season) { this.season = season; }
+
+    @Column(name="external_id")
+    public String getExternalId() {
+        return externalId;
+    }
+
+    public void setExternalId(String externalId) {
+        this.externalId = externalId;
+    }
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "competition_id")

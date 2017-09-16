@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TeamJpaRepositoryHelper extends CrudRepository<JpaTeam, Long> {
+    JpaTeam findByExternalId(String id);
 }

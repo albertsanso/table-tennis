@@ -24,6 +24,7 @@ public class CategoryToJpaCategoryMapper implements Function<Category, JpaCatego
         JpaCompetition jpaCompetition = competitionToJpaCompetitionMapper.apply(category.getCompetition());
         JpaCategory jpaCategory = new JpaCategory(category.getCodeName(), category.getName(), category.getSeason().seasonKey);
         jpaCategory.setCompetition(jpaCompetition);
+        jpaCategory.setExternalId(category.getExternalId());
         return jpaCategory;
     }
 }

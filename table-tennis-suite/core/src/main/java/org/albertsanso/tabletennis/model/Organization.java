@@ -9,17 +9,19 @@ public class Organization extends Entity {
     private String codeName;
     private String name;
     private String type;
+    private String externalId;
 
     private Set<OrganizationAlias> organizationAliases = new HashSet<OrganizationAlias>();
     private Set<OrganizationVenue> organizationVenues = new HashSet<OrganizationVenue>();
 
     private Organization() { super(); }
 
-    private Organization(Long id, String codeName, String name, String type, Set<OrganizationAlias> organizationAliases) {
+    private Organization(Long id, String codeName, String name, String type, String externalId,  Set<OrganizationAlias> organizationAliases) {
         this.id = id;
         this.codeName = codeName;
         this.name = name;
         this.type = type;
+        this.externalId = externalId;
         this.organizationAliases = organizationAliases;
     }
 
@@ -29,6 +31,7 @@ public class Organization extends Entity {
                 builder.getCodeName(),
                 builder.getName(),
                 builder.getType(),
+                builder.getExternalId(),
                 builder.getOrganizationAliases()
         );
         return organization;
@@ -49,6 +52,8 @@ public class Organization extends Entity {
     public String getType() {
         return type;
     }
+
+    public String getExternalId() { return externalId; }
 
     public Set<OrganizationAlias> getOrganizationAliases() {
         return organizationAliases;
@@ -71,6 +76,7 @@ public class Organization extends Entity {
         private String codeName;
         private String name;
         private String type;
+        private String externalId;
         private Set<OrganizationAlias> organizationAliases = new HashSet<OrganizationAlias>();
         private Set<OrganizationVenue> organizationVenues = new HashSet<OrganizationVenue>();
 
@@ -96,6 +102,8 @@ public class Organization extends Entity {
             return type;
         }
 
+        public String getExternalId() { return externalId; }
+
         public Set<OrganizationAlias> getOrganizationAliases() {
             return organizationAliases;
         }
@@ -106,6 +114,11 @@ public class Organization extends Entity {
 
         public OrganizationBuilder withId(Long id) {
             this.id = id;
+            return this;
+        }
+
+        public OrganizationBuilder withExternalId(String externalId) {
+            this.externalId = externalId;
             return this;
         }
 

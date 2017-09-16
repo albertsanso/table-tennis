@@ -34,4 +34,8 @@ public enum Season {
         }
         return null;
     }
+
+    public boolean equals(Season aSeason) {
+        return this.seasonKey.equals(aSeason.seasonKey);
+    }
 }

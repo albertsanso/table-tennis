@@ -46,6 +46,7 @@ public class JpaTeamToTeamMapper implements Function<JpaTeam, Team> {
                 .withCompetition(competition)
                 .withCategory(category)
                 .withOrganization(organization)
+                .withExternalId(jpaTeam.getExternalId())
                 .create();
 
         return team;
