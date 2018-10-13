@@ -50,6 +50,15 @@ public class RetrievalConfiguration {
     }
 
     @Bean
+    public SimpleCsvMapWriter matchesWriter() throws IOException {
+
+        RetrievalEntityConfiguration conf = getMatchesRetrievalConf();
+        SimpleCsvMapWriter writer = new SimpleCsvMapWriter();
+        writer.setCsvFile(new File(conf.getOutputCsv()));
+        return writer;
+    }
+
+    @Bean
     public SimpleCsvMapWriter teamsWriter() throws IOException {
 
         RetrievalEntityConfiguration conf = getTeamsRetrievalConf();

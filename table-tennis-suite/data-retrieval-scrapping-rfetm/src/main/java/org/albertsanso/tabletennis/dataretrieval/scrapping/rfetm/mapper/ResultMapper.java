@@ -12,7 +12,8 @@ public enum ResultMapper {
     LOCAL_POINTS                (ResultKeys.LOCAL_POINTS.key),
     VISITOR_POINTS              (ResultKeys.VISITOR_POINTS.key),
     MINUTES_URL                 (ResultKeys.MINUTES_URL.key),
-    JORNADA_NUMBER              (ResultKeys.JORNADA_NUMBER.key)
+    JORNADA_NUMBER              (ResultKeys.JORNADA_NUMBER.key),
+    CATEGORIA_ID                (ResultKeys.CATEGORIA_ID.key)
     ;
 
     public String key;

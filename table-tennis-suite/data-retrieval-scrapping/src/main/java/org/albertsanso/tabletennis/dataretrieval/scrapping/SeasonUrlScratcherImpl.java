@@ -50,6 +50,10 @@ public abstract class SeasonUrlScratcherImpl implements SeasonUrlScratcher {
         return SeasonURLUtil.buildSeasonedURL(theUrl, this.season);
     }
 
+    protected boolean isSeasonedURL(String theUrl) throws MalformedURLException {
+        return SeasonURLUtil.isSeasonedURL(theUrl);
+    }
+
     protected abstract List<String> scratchFromRoot(Elements root) throws MalformedURLException;
 
     protected abstract String getRootSelector();

@@ -46,7 +46,7 @@ public class Importer {
         this.simpleCsvMapReader = simpleCsvMapReader;
     }
 
-    public void doImport() throws Throwable {
+    public void doImportOrganizations() throws Throwable {
 
         readOrganizations();
         String[] organizationsHeader = getOrganizationsHeader();

@@ -27,7 +27,9 @@ public class MatchesResultsUrlScratcher extends SeasonUrlScratcherImpl {
     protected List<String> scratchFromRoot(Elements root) throws MalformedURLException {
         String jornadaUrl = arrangeUrl(root.attr("href"));
         if (!isCurrentSeason()) {
-            jornadaUrl = buildSeasonedURL(jornadaUrl);
+            if (!isSeasonedURL(jornadaUrl)) {
+                jornadaUrl = buildSeasonedURL(jornadaUrl);
+            }
         }
         return Arrays.asList(jornadaUrl);
     }
@@ -44,6 +46,9 @@ public class MatchesResultsUrlScratcher extends SeasonUrlScratcherImpl {
             else {
                 strUrl = "http://resultados.rfetm.es/" + strCandidateUrl;
             }
+        }
+        else {
+            strUrl = strCandidateUrl;
         }
 
         return strUrl;

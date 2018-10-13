@@ -10,7 +10,8 @@ public enum ResultKeys {
     LOCAL_POINTS                ("local_points"),
     VISITOR_POINTS              ("visitor_points"),
     MINUTES_URL                 ("minutes_url"),
-    JORNADA_NUMBER              ("jornada_number")
+    JORNADA_NUMBER              ("jornada_number"),
+    CATEGORIA_ID                ("categoria_id")
     ;
 
     public String key;

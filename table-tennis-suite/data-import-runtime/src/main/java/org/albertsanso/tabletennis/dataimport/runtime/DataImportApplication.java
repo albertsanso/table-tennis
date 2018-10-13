@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.inject.Inject;
 
 @SpringBootApplication(scanBasePackages = { "org.albertsanso.tabletennis" })
-public class DataImportApplication { /* implements CommandLineRunner {*/
+public class DataImportApplication implements CommandLineRunner {
 
     @Inject
     Importer importer;
@@ -17,15 +17,15 @@ public class DataImportApplication { /* implements CommandLineRunner {*/
         SpringApplication.run(DataImportApplication.class, args);
     }
 
-    /*
+
     @Override
     public void run(String... args) throws Exception {
         try {
-            //importer.doImport();
+            //importer.doImportOrganizations();
             //importer.doTests();
 
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-    }*/
+    }
 }

@@ -108,10 +108,17 @@ public class MatchesResultsInfoScratcher extends SeasonInfoScratcherImpl {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        String visitorTeamId = "";
 
+        String visitorTeamId = "";
         try {
             visitorTeamId = getParameterValueFromUrl("IDEQUIPO", visitorUrl);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String categoriaId = "";
+        try {
+            categoriaId = getParameterValueFromUrl("IDNIVEL", visitorUrl);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -128,6 +135,7 @@ public class MatchesResultsInfoScratcher extends SeasonInfoScratcherImpl {
         System.out.println(localUrl);
         System.out.println(strLocalPoints);
         System.out.println(strVisitorlPoints);
+        System.out.println(categoriaId);
 
 
         Map<String, String> jornadaContent = new HashMap<String, String>();
@@ -140,6 +148,7 @@ public class MatchesResultsInfoScratcher extends SeasonInfoScratcherImpl {
         jornadaContent.put(ResultMapper.LOCAL_POINTS.key, strLocalPoints);
         jornadaContent.put(ResultMapper.VISITOR_POINTS.key, strVisitorlPoints);
         jornadaContent.put(ResultMapper.MINUTES_URL.key, minutesUrl);
+        jornadaContent.put(ResultMapper.CATEGORIA_ID.key, categoriaId);
 
         return jornadaContent;
     }
