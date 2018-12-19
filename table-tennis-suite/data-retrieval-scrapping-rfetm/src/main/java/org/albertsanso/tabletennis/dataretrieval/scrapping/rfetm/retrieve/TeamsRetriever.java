@@ -50,9 +50,11 @@ public class TeamsRetriever {
 
     public void retrieveTeamsBySeason(Season season) throws IOException {
         List<String> seasonQualificationsUrls = qualificationsUrls.getQualificationsUrlsBySeason(season);
-        for (String seasonedURL : seasonQualificationsUrls) {
-            retrieveByUrlAndSeason(seasonedURL, season);
-        }
+        //if (seasonQualificationsUrls != null) {
+            for (String seasonedURL : seasonQualificationsUrls) {
+                retrieveByUrlAndSeason(seasonedURL, season);
+            }
+        //}
     }
 
     private void retrieveByUrlAndSeason(String seasonedURL, Season season) throws IOException{

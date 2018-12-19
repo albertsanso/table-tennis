@@ -5,6 +5,7 @@ import java.time.Year;
 
 public enum Season {
     CURRENT_SEASON (getCurrent()),
+    SEASON_2017_2018 ("2017-2018"),
     SEASON_2016_2017 ("2016-2017"),
     SEASON_2015_2016 ("2015-2016"),
     SEASON_2014_2015 ("2014-2015"),

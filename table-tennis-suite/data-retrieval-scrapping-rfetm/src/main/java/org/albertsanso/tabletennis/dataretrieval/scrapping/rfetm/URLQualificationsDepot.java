@@ -28,17 +28,19 @@ public class URLQualificationsDepot {
 
     public void readQualificationsUrls(String yamlQualificationsFilePath) throws IOException {
 
-        Map<Season, List<String>> urls = new HashMap<Season, List<String>>();
+        //if (yamlQualificationsFilePath != null) {
+            Map<Season, List<String>> urls = new HashMap<Season, List<String>>();
 
-        List<Map<String, ?>> rawQualifications = null;
-        try {
-            rawQualifications = (List<Map<String, ?>>) yamlReader.readRawYamlFile(yamlQualificationsFilePath);
-            for (Map<String, ?> seasonRow : rawQualifications) {
-                processQualificationsSeason(seasonRow);
+            List<Map<String, ?>> rawQualifications = null;
+            try {
+                rawQualifications = (List<Map<String, ?>>) yamlReader.readRawYamlFile(yamlQualificationsFilePath);
+                for (Map<String, ?> seasonRow : rawQualifications) {
+                    processQualificationsSeason(seasonRow);
+                }
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
             }
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
+        //}
     }
 
     protected void processQualificationsSeason(Map<String, ?> seasonRow){
