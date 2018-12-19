@@ -18,6 +18,9 @@ public class TeamsPlayersInfoScratcher extends SeasonInfoScratcherImpl {
 
     private static final String ROOT_SELECTOR = "#table1 > tbody > tr:nth-child(3) > td:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(2) > div:nth-child(5) > center > table > tbody";
 
+    //2012-2013
+    //private static final String ROOT_SELECTOR = "#table1 > tbody > tr:nth-child(3) > td:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(2) > div:nth-child(7) > center > table > tbody";
+
     private String strCompetitionId = "";
     private String strCategoryId = "";
     private String strTeamId = "";
