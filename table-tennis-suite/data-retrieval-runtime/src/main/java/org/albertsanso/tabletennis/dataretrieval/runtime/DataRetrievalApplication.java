@@ -28,9 +28,9 @@ public class DataRetrievalApplication implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
 
-        //organizationRetriever.retrieveOrganizations();
+        organizationRetriever.retrieveOrganizations();
         //matchesRetriever.retrieveMatchesInfo();
-        teamsRetriever.retrieveTeamsInfo();
+        //teamsRetriever.retrieveTeamsInfo();
         System.out.println("DONE.");
     }
 }
