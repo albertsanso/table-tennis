@@ -15,7 +15,9 @@ import java.util.List;
 public class OrganizationUrlScratcher extends SeasonUrlScratcherImpl implements SeasonUrlScratcher {
 
     private static final String ROOT_SELECTOR_2012_2013 = "#table1 > tbody > tr:nth-child(3) > td:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(2) > table:nth-child(4) > tbody > tr:nth-child(1) > td > table > tbody > tr > td:nth-child(4) > table > tbody > tr:nth-child(1) > td > table > tbody > tr > td > div:nth-child(2) > center > table";
-    private static final String ROOT_SELECTOR = "#table1 > tbody > tr:nth-child(3) > td:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(1) > td > table > tbody > tr > td:nth-child(4) > table > tbody > tr:nth-child(1) > td > table > tbody > tr > td > div:nth-child(2) > center > table";
+    //private static final String ROOT_SELECTOR = "#table1 > tbody > tr:nth-child(3) > td:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(1) > td > table > tbody > tr > td:nth-child(4) > table > tbody > tr:nth-child(1) > td > table > tbody > tr > td > div:nth-child(2) > center > table";
+    private static final String ROOT_SELECTOR = "#table1 > tbody > tr:nth-child(3) > td:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(2) > table:nth-child(6) > tbody ";
+                                                 //#table1 > tbody > tr:nth-child(3) > td:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(2) > table:nth-child(6) > tbody > tr:nth-child(1) > td:nth-child(2) > b > a
     private static final String URL_SELECTOR = "td:nth-child(2) > b > a";
 
     @Override
@@ -37,7 +39,7 @@ public class OrganizationUrlScratcher extends SeasonUrlScratcherImpl implements 
     private List<String> mapRowElements(Elements rows) {
         List<String> urls = new ArrayList();
 
-        for (int i=1; i<rows.size(); i++) {
+        for (int i=0; i<rows.size(); i++) {
             String textUrl = rows.get(i).select(URL_SELECTOR).attr("href");
             /*
             urls.add(this.baseUrl+textUrl);
